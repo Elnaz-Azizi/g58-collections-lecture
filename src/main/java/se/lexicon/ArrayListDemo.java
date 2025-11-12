@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
-        ex6();
+        ex3();
 
     }
 

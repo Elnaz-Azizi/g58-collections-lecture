@@ -1,12 +1,15 @@
 package se.lexicon;
 
+import se.lexicon.model.Person;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
-        ex4();
+        ex6();
 
     }
 
@@ -91,6 +94,41 @@ public class ArrayListDemo {
         String[] nameArray = names.toArray(new String[0]);
 
         System.out.println("First name:" + nameArray[0]);
+
+
+    }
+
+    //Sorting and shuffling
+    public static void ex5() {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(2);
+        numbers.add(8);
+        numbers.add(1);
+        numbers.add(3);
+
+        Collections.sort(numbers);
+        System.out.println(numbers);
+
+        Collections.sort(numbers, Collections.reverseOrder());// When you want sort first and then reverse it
+        //Collections.reverse(numbers);
+        System.out.println(numbers);
+
+        Collections.shuffle(numbers);
+        System.out.println(numbers);
+
+    }
+    // Using equals and hashCode methods
+    public static void ex6() {
+        Person person1 = new Person(1, "Mehrdad", "mehrdad.javan@lexicon.se");
+        Person person2 = new Person(1, "Mehrdad", "mehrdad.javan@lexicon.se");
+
+        System.out.println(person1.equals(person2));// false
+
+        String test1 = "TEST";
+        String test2 = "TEST";
+        System.out.println(test1.equals(test2));
+
 
 
     }
